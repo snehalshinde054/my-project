@@ -37,8 +37,9 @@
 			res.json().then(
 					data=>{
 						console.log(data);
-						if(data.length >0)
+						if(data.results.length >0)
 						{
+							console.log("if condition success");
 							var temp="";
 							data.results.forEach((u)=>{
 								console.log("****");
