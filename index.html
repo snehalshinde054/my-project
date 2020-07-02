@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
@@ -29,15 +30,12 @@
 			res.json().then(
 					data=>{
 						console.log(data);
-						if(data.length >0)
-						{
-							console.log("if condition success");
+						console.log("if condition success");
 
-							
-							
-							document.getElementById("headertext").text(data);
+							var paragraph = document.getElementById("headertext");
 
-						}
+				             paragraph.textContent += data.data;
+						
 					}
 				)
 		}
