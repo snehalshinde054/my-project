@@ -17,9 +17,10 @@
 				<table class="table table-stripped">
 					<thead>
 						<tr>
-							<th>First Name</th>
 							<th>Email</th>
-							<th>City</th>
+							<th>Phone</th>
+							<th>Gender</th>
+
 						</tr>
 					</thead>
 					<tbody id="tableData"> </tbody>
@@ -47,9 +48,9 @@
 								console.log("****");
 								console.log(u);
 								temp +="<tr>";
-								temp +="<td>"+u.gender+"</td>";
 								temp +="<td>"+u.email+"</td>";
-								temp +="<td>"+u.city+"</td>";
+								temp +="<td>"+u.phone+"</td>";
+								temp +="<td>"+u.gender+"</td>";
 							}
 								)
 							document.getElementById("tableData").innerHTML=temp;
