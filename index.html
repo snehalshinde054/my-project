@@ -13,18 +13,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h1 style="text-align:center;color:red;"> Welcome To The Project!!! </h1>
-				<table class="table table-bordered ">
-					<thead>
-						<tr>
-							<th>Email</th>
-							<th>Phone</th>
-							<th>Gender</th>
+				<h1 style="text-align:center;color:red;" id="headertext"></h1>
 
-						</tr>
-					</thead>
-					<tbody id="tableData"> </tbody>
-				</table>
+				
 			</div>
 		</div>
 		
@@ -33,27 +24,19 @@
 </body>
 </html>
 <script type="text/javascript">
-	fetch("https://randomuser.me/api/?results=10").then(
+
+	fetch("https://5.189.169.168:8080/test").then(
 		res=>{
 			res.json().then(
 					data=>{
 						console.log(data);
-						if(data.results.length >0)
+						if(data.length >0)
 						{
 							console.log("if condition success");
-							var temp="";
-							data.results.forEach((u)=>{
-								console.log("****");
-								console.log(u.gender);
-								console.log("****");
-								console.log(u);
-								temp +="<tr>";
-								temp +="<td>"+u.email+"</td>";
-								temp +="<td>"+u.phone+"</td>";
-								temp +="<td>"+u.gender+"</td>";
-							}
-								)
-							document.getElementById("tableData").innerHTML=temp;
+							
+							
+							
+							document.getElementById("headertext").text(data);
 
 						}
 					}
